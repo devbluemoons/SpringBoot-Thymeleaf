@@ -21,8 +21,8 @@
 4. click `Apply and Close`
 5. install `Tern Eclipse IDE`
 6. click your `project` and then click `mouse right button`
-7. click `properties`
-8. search `JavaScript > Tern > Modules`
+7. click `configure`
+8. search `Convert to Tern Project..`
 9. check list to apply
 10. click `Apply and Close`
 11. `Restart` Eclipse
