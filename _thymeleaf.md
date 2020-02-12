@@ -2,5 +2,7 @@
 
 ###### first set-up
 ```html
- <html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
 ```
