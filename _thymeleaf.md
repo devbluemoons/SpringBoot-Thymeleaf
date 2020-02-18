@@ -6,7 +6,7 @@
 
 </html>
 ```
-###### must check this
+###### check this rule!!
   
 변수 타입이 string, int 일 경우 변수에 값이 없어도 그냥 넘어간다  
 그러나 타입이 date 일 경우 에러를 발생시킨다  
