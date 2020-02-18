@@ -19,5 +19,5 @@
 <td th:text="${row.address}"></td>
 <td th:text="${row.email}"></td>
 <td th:text="${row.register_dt}"></td>
-<td th:text="${row.update_dt}">view</td> <!-- 변수 타입이 date이고 값이 없을 경우 에러 발생 -->
+<td th:text="${row.update_dt}"></td> <!-- 변수 타입이 date이고 값이 없을 경우 에러 발생 -->
 ```
