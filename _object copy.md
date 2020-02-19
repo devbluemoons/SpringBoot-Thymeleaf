@@ -12,11 +12,11 @@ BeanUtils.copyProperties(source, target);
 
 // example
 @Transactional
-	public Long updateTestDev(TestDevVo vo) throws Exception {
-		
-		TestDevVo target = testMapper.findOneTestDev(vo.getSeq());
-		BeanUtils.copyProperties(vo, target);
-		
-		return testMapper.updateTestDev(target);
-	}
+public Long updateTestDev(TestDevVo vo) throws Exception {
+
+	TestDevVo target = testMapper.findOneTestDev(vo.getSeq());
+	BeanUtils.copyProperties(vo, target);
+
+	return testMapper.updateTestDev(target);
+}
 ```
