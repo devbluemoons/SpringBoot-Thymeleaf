@@ -44,6 +44,13 @@
 `th:block` 태그는 타임리프의 문법을 적용할 수 있는 태그이다
 ```html
 <th:block></th:block>
-<!-- 예제 -->
+<!-- Example -->
 <th:block th:text="${user.name}"></th:block>
+```
+  
+###### import dynamic js file path
+```html
+<script th:src="|/static/js/${javascript_File_name}.js|"></script>
+<!-- Example -->
+<script th:src="|/static/js/${routerPath}.js|"></script> <!--routerPath javaScript file-->
 ```
