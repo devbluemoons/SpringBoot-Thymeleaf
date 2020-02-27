@@ -39,3 +39,11 @@
   <td th:text="${row.name}"></td>
 </tr>
 ```
+###### th:block tag
+  
+`th:block` 태그는 타임리프의 문법을 적용할 수 있는 태그이다
+```html
+<th:block></th:block>
+<!-- 예제 -->
+<th:block th:text="${user.name}"></th:block>
+```
