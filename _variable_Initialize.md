@@ -8,7 +8,7 @@ Map<K,V> map = new Map<K,V>();
 
 ###### range
 | Kind      | Type   | Byte/Bit | Range   |
-| :---:     | :---:  | :---:    | :---:   |
+| :---:     | :---:  | :---:    | :---   |
 | `논리형`  | boolean | 1 / 8   | true 또는 false    |
 | `문자형`  | char    | 2 / 16  | '\u0000' ~ 'uFFFF' |
 | `정수형`  | byte    | 1 / 8   | -128 ~ 127         |
