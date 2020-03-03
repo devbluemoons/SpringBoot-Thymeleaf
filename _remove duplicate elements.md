@@ -8,4 +8,4 @@ public static <T> Predicate<T> distinctByKey(Function<? super T, ?> keyExtractor
 people.stream().filter(distinctByKey(Person::getName)).collect(Collectors.toList());
 ```
   
-Ref. / https://stackoverflow.com/questions/23699371/java-8-distinct-by-property
+Reference - https://stackoverflow.com/questions/23699371/java-8-distinct-by-property
