@@ -9,3 +9,17 @@
 | `Exabyte`   | EB     | 2 / 60 | 1,152,921,504,606,846,976         | 1024 PB  |
 | `Zettabyte` | ZB     | 2 / 70 | 1,180,591,620,717,411,303,424     | 1024 EB  |
 | `Yottabyte` | YB     | 2 / 80 | 1,208,925,819,614,629,174,706,176 | 1024 ZB  |
+  
+```java
+public class CommonConstant {
+
+	private static final long BYTE = 1024;
+	private static final long MEGABYTE = BYTE * 1024;
+	private static final long GIGABYTE = MEGABYTE * 1024;
+	private static final long TERABYTE = GIGABYTE * 1024;
+	private static final long PETABYTE = TERABYTE * 1024;
+	private static final long EXABYTE = PETABYTE * 1024;
+	private static final long ZETTABYTE = EXABYTE * 1024;
+	private static final long YOTTABYTE = ZETTABYTE * 1024;
+}
+```
