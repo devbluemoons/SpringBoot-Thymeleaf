@@ -5,5 +5,5 @@ public static <T> Predicate<T> distinctByKey(Function<? super T, ?> keyExtractor
     return t -> seen.add(keyExtractor.apply(t));
 }
 
-people.stream().filter(distinctByKey(Person::getName))
+people.stream().filter(distinctByKey(Person::getName)).collect(Collectors.toList());
 ```
