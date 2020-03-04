@@ -57,16 +57,16 @@
   
 ###### table multiple loot example
 ```html
-<table class="tbList tblHeight34">
+<table class="tbList">
   <colgroup><col style=""></colgroup>
   <thead>
     <tr>
       <th>no</th>
-      <th>장비그룹선택</th>
-      <th>장비그룹</th>
-      <th>호스트명</th>
-      <th>용도</th>
-      <th>IP</th>
+      <th>column01</th>
+      <th>column02</th>
+      <th>column03</th>
+      <th>column04</th>
+      <th>column05</th>
     </tr>
   </thead>
   <tbody>
