@@ -54,3 +54,39 @@
 <!-- Example -->
 <script th:src="|/static/js/${routerPath}.js|"></script> <!--routerPath javaScript file-->
 ```
+  
+###### table multiple loot example
+```html
+<table class="tbList tblHeight34">
+  <colgroup><col style=""></colgroup>
+  <thead>
+    <tr>
+      <th>no</th>
+      <th>장비그룹선택</th>
+      <th>장비그룹</th>
+      <th>호스트명</th>
+      <th>용도</th>
+      <th>IP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <th:block th:each="group, gStat : ${equipGroupList}">
+      <tr th:each="equip, eStat : ${group.diAgentList}">
+        <td th:if="${eStat.index == 0 && eStat.size == 1}" th:text="${gStat.count}"></td>
+        <td th:if="${eStat.index == 0 && eStat.size > 1}" th:rowspan="${eStat.size}" th:text="${gStat.count}"></td>
+        <td th:if="${eStat.index == 0 && eStat.size == 1}">
+          <input type="checkbox" th:value="${group.CODE}" onclick="checkBox(this)">
+        </td>
+        <td th:if="${eStat.index == 0 && eStat.size > 1}" th:rowspan="${eStat.size}">
+          <input type="checkbox" th:value="${group.CODE}" onclick="checkBox(this)">
+        </td>
+        <td th:if="${eStat.index == 0 && eStat.size == 1}" th:text="${group.CODE_NAME}"></td>
+        <td th:if="${eStat.index == 0 && eStat.size > 1}" th:rowspan="${eStat.size}" th:text="${group.CODE_NAME}"></td>
+        <td th:text="${equip.HOSTNAME}"></td>
+        <td th:text="${equip.MODEL}"></td>
+        <td th:text="${equip.AGENT_IP}"></td>
+      </tr>
+    </th:block>
+  </tbody>
+</table>
+```
