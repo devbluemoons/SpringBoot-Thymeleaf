@@ -44,8 +44,8 @@ public class Pagination {
 	// class를 상속받을 경우 오류 방지를 위한 "기본 생성자" 정의
 	public Pagination() {}
 	
-	// 생성자 파라미터를 통하여 "총 게시물 수"와 "현재 페이지"를 받는다
-	public Pagination(int listCnt, int curPage) {
+	// 생성자 파라미터를 통하여 "한 페이지당 게시글 수","총 게시물 수","현재 페이지"를 받는다
+	public Pagination(int pageSize, int listCnt, int curPage) {
 		
 		/**
 		 * 페이징 처리 순서
@@ -54,15 +54,21 @@ public class Pagination {
 		 * 3. range setting
 		 */
 		
+		/** 한 페이지당 게시글 수 **/
+		setPageSize(pageSize);
+		
 		/** 현재페이지 **/
 		setCurPage(curPage);
+		
 		/** 총 게시물 수 **/
 		setListCnt(listCnt);
 		
 		/** 1. 총 페이지 수 **/
 		setPageCnt(listCnt);
+		
 		/** 2. 총 블럭(range)수 **/
 		setRangeCnt(pageCnt);
+		
 		/** 3. 블럭(range) setting **/
 		rangeSetting(curPage);
 		
