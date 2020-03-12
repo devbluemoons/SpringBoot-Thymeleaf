@@ -1,4 +1,4 @@
- ###### create Pagination
+ ###### create Pagination.java
 ```java
 import lombok.Data;
 
@@ -71,17 +71,14 @@ public class Pagination {
 	}
 	// ("총 페이지 수") "총 게시물 수"를 "한 페이지당 게시글 수"로 나눈다
 	public void setPageCnt(int listCnt) {
-		
 		this.pageCnt = (int) Math.ceil(listCnt*1.0 / pageSize);
 	}
 	// ("총 블럭[range]수") "총 페이지 수"를 "한 블럭(range)당 페이지 수"로 나눈다
 	public void setRangeCnt(int pageCnt) {
-		
 		this.rangeCnt = (int) Math.ceil(pageCnt*1.0 / rangeSize);
 	}
 	// ("현재 블럭[range]") "현재 페이지"에서 "한 블럭(range)당 페이지 수"로 나눈다
 	public void setCurRange(int curPage) {
-		
 		this.curRange = (int)((curPage - 1) / rangeSize) + 1;
 	}
 	
@@ -106,7 +103,6 @@ public class Pagination {
 	
 	// DB에서 data를 가져올 때 "현재 페이지"를 기준으로 "시작점"을 구한다
 	public void setStartIndex(int curPage) {
-		
 		this.startIndex = (curPage - 1) * pageSize;
 	}
 }
