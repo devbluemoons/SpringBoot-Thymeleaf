@@ -1,3 +1,17 @@
-###### Map 타입의 값으로 List 타입을 넣어줄 때 에러 발생
-- 예를 들어 Map<String, Object> 타입에 List<CustomVO> 값을 넘길 때 `GET not supported` 에러가 발생
-- 확실하지 않은 케이스 더 많은 테스트가 필요
+###### HashMap<String, Object> cast error  
+- 맵으로 받은 데이터를 `int number = (int) param.get("data001")` 이런식으로 바로 캐스팅하면 에러 발생
+- 이러한 형태로 파싱을 해줘야 정상작동한다 int curPage =  Integer.parseInt(String.valueOf(param.get("data001")));
+  
+```java
+@PostMapping("/findData")
+public String findData(@RequestParam Map<String, Object> param) throws Exception{
+
+  if(param.get("data001").equals("")) {
+    param.put("data001", 1);
+  }
+
+  int curPage =  Integer.parseInt(String.valueOf(param.get("data001")));
+
+  return "redirect:/main";
+}
+```
