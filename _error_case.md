@@ -6,12 +6,12 @@
 @PostMapping("/findData")
 public String findData(@RequestParam Map<String, Object> param) throws Exception{
 
-  if(param.get("data001").equals("")) {
-    param.put("data001", 1);
-  }
+    if(param.get("data001").equals("")) {
+        param.put("data001", 1);
+    }
 
-  int curPage =  Integer.parseInt(String.valueOf(param.get("data001")));
+    int curPage = Integer.parseInt(String.valueOf(param.get("data001")));
 
-  return "redirect:/main";
+    return "redirect:/main";
 }
 ```
