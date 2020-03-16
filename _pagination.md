@@ -78,6 +78,7 @@ public class Pagination {
 	// ("총 페이지 수") "총 게시물 수"를 "한 페이지당 게시글 수"로 나눈다
 	public void setPageCnt(int listCnt) {
 		this.pageCnt = (int) Math.ceil(listCnt*1.0 / pageSize);
+		if(this.pageCnt == 0) this.pageCnt = 1;
 	}
 	// ("총 블럭[range]수") "총 페이지 수"를 "한 블럭(range)당 페이지 수"로 나눈다
 	public void setRangeCnt(int pageCnt) {
