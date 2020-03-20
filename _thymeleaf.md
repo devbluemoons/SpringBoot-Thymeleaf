@@ -90,3 +90,19 @@
   </tbody>
 </table>
 ```
+  
+###### check map property
+- `map`에서 특정 프로퍼티의 존재 유무는 `?. 연산자`로 확인할 수 없다. 대신 `maps 유틸리티` 사용  
+- `maps.isEmpty(obj)`: `obj`가 `null`이거나 `null`이 아니어도 비어있으면 `true`
+- `maps.containsKey(obj, name)`: `obj`에 `name`으로 지정된 요소가 있으면 `true`  
+  
+```html
+<!-- ex) th:if="${#maps.containsKey(object,'property_name')}" -->
+
+<td th:if="${#maps.containsKey(row,'DEPARTMENT')}" th:text="${row.DEPARTMENT}"></td>
+<td th:if="${not #maps.containsKey(row,'DEPARTMENT')}"></td>
+
+<td th:if="${#maps.containsKey(row,'PHONE')}" th:text="${row.PHONE}"></td>
+<td th:if="${not #maps.containsKey(row,'PHONE')}"></td>
+```
+[참조] https://noritersand.github.io/java/2019/01/24/java-%ED%83%80%EC%9E%84%EB%A6%AC%ED%94%84-thymeleaf-%EA%B8%B0%EB%B3%B8/
