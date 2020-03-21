@@ -1,3 +1,7 @@
+###### must use e.printStackTrace();
+- this gives infomation that is caused almost ploblems
+- when developing you must use this!!!
+
 ###### HashMap<String, Object> cast error  
 - 맵으로 받은 데이터를 `int number = (int) param.get("data001")` 이런식으로 바로 캐스팅하면 에러 발생
 - 이러한 형태로 파싱을 해줘야 정상작동한다 int curPage =  Integer.parseInt(String.valueOf(param.get("data001")));
