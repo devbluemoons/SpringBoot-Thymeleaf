@@ -106,3 +106,12 @@
 <td th:if="${not #maps.containsKey(row,'PHONE')}"></td>
 ```
 [참조] https://noritersand.github.io/java/2019/01/24/java-%ED%83%80%EC%9E%84%EB%A6%AC%ED%94%84-thymeleaf-%EA%B8%B0%EB%B3%B8/
+  
+###### check empty (List / Map)
+```html
+<!-- List -->
+${not #string.isEmpty(list-data)}
+
+<!-- Map -->
+${map-data.isEmpty()}
+```
