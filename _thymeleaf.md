@@ -115,3 +115,8 @@ ${not #string.isEmpty(list-data)}
 <!-- Map -->
 ${map-data.isEmpty()}
 ```
+  
+###### date format
+```html
+<th:block th:text="${#dates.format(base-date, 'yyyy-MM-dd HH:mm:ss')}"></th:block>
+```
