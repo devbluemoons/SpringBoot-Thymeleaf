@@ -120,3 +120,7 @@ ${map-data.isEmpty()}
 ```html
 <th:block th:text="${#dates.format(base-date, 'yyyy-MM-dd HH:mm:ss')}"></th:block>
 ```
+###### mixed string
+```html
+<th:block th:text="|${group.CODE} / ${group.CODE_NAME}|"></th:block>
+```
