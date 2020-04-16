@@ -31,7 +31,6 @@ public class DateAndTime {
 	}
 	
 	public Date getCurrentDateTypeDate() {
-		
 		return new Date(System.currentTimeMillis());
 	}
 	
