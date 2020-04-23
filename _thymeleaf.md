@@ -124,3 +124,10 @@ ${map-data.isEmpty()}
 ```html
 <th:block th:text="|${group.CODE} / ${group.CODE_NAME}|"></th:block>
 ```
+###### substring
+```html
+"${#strings.substring(data,startPoint,howMany)}"
+
+<!-- example -->
+<td th:text="${#strings.substring(row.DTIME,0,10)}"></td>
+```
