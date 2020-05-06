@@ -120,9 +120,10 @@ ${map-data.isEmpty()}
 ```html
 <th:block th:text="${#dates.format(base-date, 'yyyy-MM-dd HH:mm:ss')}"></th:block>
 ```
-###### mixed string
+###### concat or mixed string
 ```html
 <th:block th:text="|${group.CODE} / ${group.CODE_NAME}|"></th:block>
+<td th:text="${#maps.containsKey(row,'COUNT')} ? |${row.COUNT} 건| : ''"></td>
 ```
 ###### substring
 ```html
@@ -130,4 +131,5 @@ ${map-data.isEmpty()}
 
 <!-- example -->
 <td th:text="${#strings.substring(row.DTIME,0,10)}"></td>
+<td th:text="${#maps.containsKey(row,'DTIME')} ? ${#strings.substring(row.DTIME,0,16)} : ''"></td>
 ```
