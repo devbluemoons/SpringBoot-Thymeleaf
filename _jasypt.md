@@ -6,9 +6,16 @@
   <artifactId>jasypt-spring31</artifactId>
   <version>1.9.2</version>
 </dependency>
+
+<!-- when AES128 or AES256 is used -->
+<dependency> <groupId>org.bouncycastle</groupId>
+	<artifactId>bcprov-jdk15on</artifactId>
+	<version>1.61</version>
+</dependency>
 ```
 ###### spring config xml
 ```xml
+<!-- MD5 -->
 <bean id="encryptorConfig" class="org.jasypt.encryption.pbe.config.EnvironmentPBEConfig">
   <property name="algorithm" value="PBEWithMD5AndDES" />
   <property name="password" value="!referenceKey@" />
@@ -25,6 +32,28 @@
       <value>classpath:/properties/application.xml</value>
     </list>
   </property>
+</bean>
+
+<!-- AES 256 -->
+<bean id="bouncyCastleProvider" class="org.bouncycastle.jce.provider.BouncyCastleProvider"/>
+
+<bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+	<property name="provider" ref="bouncyCastleProvider" />
+	<property name="algorithm" value="PBEWITHSHA256AND256BITAES-CBC-BC" />
+	<property name="password" value="37737" />
+</bean>
+
+<bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+	<property name="config" ref="environmentVariablesConfiguration" />
+</bean>
+
+<bean id="propertyConfig" class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+	<constructor-arg ref="configurationEncryptor" />
+	<property name="locations">
+		<list>
+			<value>classpath:/properties/application.xml</value>
+		</list>
+	</property>
 </bean>
 ```
 ###### application.xml
