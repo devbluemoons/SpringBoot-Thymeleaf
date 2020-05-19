@@ -149,3 +149,21 @@ ${map-data.isEmpty()}
   </tr>
 </thead>
 ```
+  
+###### map.get("key")
+```html
+<tbody>
+  <th:block th:if="${!list.isEmpty()}">
+    <tr th:each="row, status : ${list}">
+      <td th:text="${status.count + (page.curPage - 1) * page.pageSize}"></td>
+      <th:block th:each="item : ${column}">
+        <td th:text="${row.get(item.COLUMN_NAME)}"></td>
+      </th:block>
+    </tr>
+  </th:block>
+  <th:block th:if="${list.isEmpty()}">
+    <tr><td th:colspan="${column.size()}">데이터가 존재하지 않습니다.</td></tr>
+  </th:block>
+</tbody>
+```
+[Ref.] https://stackoverflow.com/questions/28621301/how-to-use-map-getkey-in-thymeleaf-broadleaf-ecom
