@@ -134,7 +134,7 @@ ${map-data.isEmpty()}
 <td th:text="${#maps.containsKey(row,'DTIME')} ? ${#strings.substring(row.DTIME,0,16)} : ''"></td>
 ```
   
-###### th:width
+###### th:width / `DYNAMIC TABLE`
 ```html
 <thead>
   <tr th:if="${!column.isEmpty()}">
@@ -150,7 +150,7 @@ ${map-data.isEmpty()}
 </thead>
 ```
   
-###### map.get("key")
+###### map.get("key") / `DYNAMIC TABLE`
 ```html
 <tbody>
   <th:block th:if="${!list.isEmpty()}">
