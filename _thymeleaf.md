@@ -166,4 +166,36 @@ ${map-data.isEmpty()}
   </th:block>
 </tbody>
 ```
-[Ref.] https://stackoverflow.com/questions/28621301/how-to-use-map-getkey-in-thymeleaf-broadleaf-ecom
+[Ref.] https://stackoverflow.com/questions/28621301/how-to-use-map-getkey-in-thymeleaf-broadleaf-ecom  
+  
+###### sticky thead
+```html
+<thead class="sticky-thead"></thead>
+```
+```css
+.sticky-thead th {
+	z-index: 100;
+	background:#ddebf5;
+	font-weight:bold;
+	position: sticky;
+	top: 0;
+}
+
+.sticky-thead th:before {
+	content:'';
+	position:absolute;
+	left: 0;
+	top: 0;
+	width:100%;
+	border-top:1px solid #7d9aae;
+}
+
+.sticky-thead th:after {
+	content:'';
+	position:absolute;
+	left: 0;
+	bottom: 0;
+	width:100%;
+	border-bottom:1px solid #C2D2DF;
+}
+```
