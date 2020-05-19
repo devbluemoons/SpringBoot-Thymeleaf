@@ -133,3 +133,17 @@ ${map-data.isEmpty()}
 <td th:text="${#strings.substring(row.DTIME,0,10)}"></td>
 <td th:text="${#maps.containsKey(row,'DTIME')} ? ${#strings.substring(row.DTIME,0,16)} : ''"></td>
 ```
+  
+###### th:width
+```html
+<tr th:if="${!column.isEmpty()}">
+  <th:block th:each="item, status : ${column}">
+    <th th:width="|${100 / status.size}%|" onclick="sort(event)">
+      <div class="th-text sorting">
+        <input type="hidden" th:value="${item.COLUMN_NAME}"/>
+        <th:block th:text="${item.COLUMN_NAME}"></th:block>
+      </div>
+    </th>
+  </th:block>
+</tr>
+```
