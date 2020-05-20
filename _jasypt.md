@@ -15,39 +15,29 @@
 ```
 ###### spring config xml
 ```xml
-<!-- MD5 -->
-<bean id="encryptorConfig" class="org.jasypt.encryption.pbe.config.EnvironmentPBEConfig">
-  <property name="algorithm" value="PBEWithMD5AndDES" />
-  <property name="password" value="!referenceKey@" />
-</bean>
+<!-- ### START ### / Jasypt 설정 -->
+	
+<!-- ### MD5 ### -->
+<!-- <bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+	<property name="algorithm" value="PBEWithMD5AndDES" />
+	<property name="password" value="jasyptPass" />
+</bean> -->
+<!-- ### MD5 ### -->
 
-<bean id="encryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
-  <property name="config" ref="encryptorConfig" />
-</bean>
-
-<bean class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
-  <constructor-arg ref="encryptor" />
-  <property name="locations">
-    <list>
-      <value>classpath:/properties/application.xml</value>
-    </list>
-  </property>
-</bean>
-
-<!-- AES 256 -->
+<!-- ### AES256 ### -->
 <bean id="bouncyCastleProvider" class="org.bouncycastle.jce.provider.BouncyCastleProvider"/>
-
 <bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
 	<property name="provider" ref="bouncyCastleProvider" />
 	<property name="algorithm" value="PBEWITHSHA256AND256BITAES-CBC-BC" />
-	<property name="password" value="37737" />
+	<property name="password" value="jasyptPass" />
 </bean>
+<!-- ### AES256 ### -->
 
 <bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
 	<property name="config" ref="environmentVariablesConfiguration" />
 </bean>
 
-<bean id="propertyConfig" class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+<bean id="propertyConfig" class="org.jasypt.spring4.properties.EncryptablePropertyPlaceholderConfigurer">
 	<constructor-arg ref="configurationEncryptor" />
 	<property name="locations">
 		<list>
@@ -55,6 +45,7 @@
 		</list>
 	</property>
 </bean>
+<!-- ### END ### / Jasypt 설정 -->
 ```
 ###### application.xml
 ```xml
