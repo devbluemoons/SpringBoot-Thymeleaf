@@ -1,16 +1,17 @@
 ###### pom.xml
 ```xml
-<!-- JASYPT: Spring 3.1x Simplified Encryption -->
+<!-- JASYPT: Spring 4.x Simplified Encryption -->
 <dependency>
-  <groupId>org.jasypt</groupId>
-  <artifactId>jasypt-spring31</artifactId>
-  <version>1.9.2</version>
+	<groupId>org.jasypt</groupId>
+	<artifactId>jasypt-spring4</artifactId>
+	<version>1.9.3</version>
 </dependency>
 
 <!-- when AES128 or AES256 is used -->
-<dependency> <groupId>org.bouncycastle</groupId>
+<dependency>
+	<groupId>org.bouncycastle</groupId>
 	<artifactId>bcprov-jdk15on</artifactId>
-	<version>1.61</version>
+	<version>1.65</version>
 </dependency>
 ```
 ###### spring config xml
@@ -18,10 +19,10 @@
 <!-- ### START ### / Jasypt 설정 -->
 	
 <!-- ### MD5 ### -->
-<!-- <bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+<bean id="environmentVariablesConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
 	<property name="algorithm" value="PBEWithMD5AndDES" />
 	<property name="password" value="jasyptPass" />
-</bean> -->
+</bean>
 <!-- ### MD5 ### -->
 
 <!-- ### AES256 ### -->
