@@ -199,3 +199,9 @@ ${map-data.isEmpty()}
 	border-bottom:1px solid #C2D2DF;
 }
 ```
+  
+###### how to check null for list
+```html
+<th:block th:if="${not #lists.isEmpty(list-Object)}"></th:block>
+<th:block th:if="${#lists.isEmpty(list-Object)}"></th:block>
+```
