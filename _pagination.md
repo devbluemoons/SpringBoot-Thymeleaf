@@ -116,3 +116,25 @@ public class Pagination {
 ```
   
 참조 : https://gangnam-americano.tistory.com
+  
+###### thymeleaf pagination
+```html
+<th:block th:if="${page != null}">
+    <div class="page_wrap mgt20">
+        <div class="pagingData">
+            <ul>
+                <th:block th:if="${page.curRange > 1}">
+                    <li><a class="before" href="#" onclick="currentPage(event)" th:text="${page.startPage - page.rangeSize}">beforeRange</a></li>
+                </th:block>
+                <th:block th:each="num : ${#numbers.sequence(page.startPage, page.endPage)}">
+                      <li th:if="${num == page.curPage}" class="active"><a href="#" onclick="currentPage(event)" th:text="${num}"></a></li>
+                      <li th:if="${num != page.curPage}"><a href="#" onclick="currentPage(event)" th:text="${num}"></a></li>
+                </th:block>
+                <th:block th:if="${page.curRange < page.rangeCnt}">
+                    <li><a class="next" href="#" onclick="currentPage(event)" th:text="${page.startPage + page.rangeSize}">nextRange</a></li>
+                </th:block>
+            </ul>
+        </div>
+    </div>
+</th:block>
+```
