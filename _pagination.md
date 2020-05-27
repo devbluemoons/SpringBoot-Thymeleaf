@@ -117,7 +117,7 @@ public class Pagination {
   
 참조 : https://gangnam-americano.tistory.com
   
-###### thymeleaf pagination
+###### example for thymeleaf
 ```html
 <th:block th:if="${page != null}">
     <div class="page_wrap mgt20">
