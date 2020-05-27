@@ -3,7 +3,7 @@
 @GetMapping // get 
 @PostMapping // post
 @PutMapping // update[All]
-@DeletMapping // delete
+@DeleteMapping // delete
 ```
   
 ###### @RequestBody / @ResponseBody
