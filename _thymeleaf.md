@@ -205,3 +205,4 @@ ${map-data.isEmpty()}
 <th:block th:if="${not #lists.isEmpty(list-Object)}"></th:block>
 <th:block th:if="${#lists.isEmpty(list-Object)}"></th:block>
 ```
+[Ref.] https://stackoverflow.com/questions/33106391/how-to-check-if-list-is-empty-using-thymeleaf
