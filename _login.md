@@ -154,7 +154,10 @@ param.replace("PASS_WORD", passwordEncoder().encode(password));
   
 ###### Thymeleaf Authority
 ```html
-<div sec:authorize="hasRole('ROLE_ENG')">contents</div> 
+<!-- when there is selected authority value division is show but hide -->
+<!-- we can set only one authority hasRole() function -->
+<div sec:authorize="hasRole('ROLE_ENG')">contents</div>
+<!-- we can set multiple authority hasRole() function -->
 <div sec:authorize="hasAnyRole('ROLE_ENG','ROLE_ADMIN')">contents</div>
 ```
   
