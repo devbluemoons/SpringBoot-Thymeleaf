@@ -152,5 +152,11 @@ String password = param.get("PASS_WORD").toString();
 param.replace("PASS_WORD", passwordEncoder().encode(password));
 ```
   
+###### Thymeleaf Authority
+```html
+<div sec:authorize="hasRole('ROLE_ENG')">contents</div> 
+<div sec:authorize="hasAnyRole('ROLE_ENG','ROLE_ADMIN')">contents</div>
+```
+  
 ###### csrf / `post` issue
 [Ref.] https://www.slipp.net/questions/480
