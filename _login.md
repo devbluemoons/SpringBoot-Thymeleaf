@@ -137,5 +137,20 @@ public class IndexController {
 }
 ```
   
+###### Password / Insert / Update
+- Spring Security required BcryptPassword
+- We must use this API
+```java
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+public PasswordEncoder passwordEncoder() {
+	return new BCryptPasswordEncoder();
+}
+
+String password = param.get("PASS_WORD").toString();
+param.replace("PASS_WORD", passwordEncoder().encode(password));
+```
+  
 ###### csrf / `post` issue
 [Ref.] https://www.slipp.net/questions/480
