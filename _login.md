@@ -116,5 +116,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
   
+###### Index Controller
+```java
+@Controller
+public class IndexController {
+	
+	@Autowired UserService userService;
+	
+	@GetMapping({"","/"})
+	public String index() throws Exception {
+		
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		
+		if(user != null) {
+			return "redirect:/main"; // 지정된 메인화면 (사이트에 따라 메인화면이 달라질 수 있다!)
+		}else {
+			return "redirect:/login";
+		}
+	}
+}
+```
+  
 ###### csrf / `post` issue
 [Ref.] https://www.slipp.net/questions/480
