@@ -33,5 +33,5 @@ logging.level.com.log.insight=trace
 server.port=80
 
 ## session
-server.servlet.session.timeout=60s
+server.servlet.session.timeout=30m
 ```
