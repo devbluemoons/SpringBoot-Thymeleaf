@@ -35,3 +35,5 @@ server.port=80
 ## session
 server.servlet.session.timeout=30m
 ```
+---
+###### 외부 파일로 분리
