@@ -37,3 +37,6 @@ server.servlet.session.timeout=30m
 ```
 ---
 ###### 외부 파일로 분리
+- jar 파일 `외부` 우선순위와 `경로` 확인 후 설정
+- jar 파일 `내부` 우선순위와 `경로` 확인 후 설정
+[Ref.] https://engkimbs.tistory.com/765
