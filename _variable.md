@@ -18,3 +18,14 @@ Map<K,V> map = new Map<K,V>();
 | `실수형`  | float   | 4 / 32  | 1.4E-45 ~ 3.4028235E38   |
 | `실수형 ` | double  | 8 / 64  | 4.9E-324 ~ 1.7976931348623157E308 |
 
+###### javascript to java string of boolean value
+```js
+const toggle = "true";
+```
+
+```java
+Boolean toggle = request.getParameter("toggle");
+log.info(toggle);
+```
+- js 에서 boolean 값을 스트링 타입으로 보내도 "true" or "false"
+- java 에서 boolean 타입으 변수에 대입할 경우 java에서는 boolean 타입이 된다
