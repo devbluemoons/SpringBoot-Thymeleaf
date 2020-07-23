@@ -39,3 +39,5 @@ public String findAllTestDev(TestDevVo vo, Model model) throws Exception{
 		return testService.registerTestDev(vo);
 }
 ```
+  
+###### @NotBlank / @NotNull / @NotEmpty
