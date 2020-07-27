@@ -41,3 +41,7 @@ public String findAllTestDev(TestDevVo vo, Model model) throws Exception{
 ```
   
 ###### @NotBlank / @NotNull / @NotEmpty / @range / @length
+  
+  
+###### @Transactional
+- public 메소드에만 선언한다
