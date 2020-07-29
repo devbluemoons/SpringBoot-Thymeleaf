@@ -25,3 +25,6 @@ public String findData(@RequestParam Map<String, Object> param) throws Exception
 - 에러가 발생할 경우 직관적으로 확인하기 어렵다는 단점이 있다.
 - 이와 같은 경우에는 직접 `java -jar` 명령어를 사용하여 어플리케이션을 실행해보자   
 - `에러로그`를 직관적으로 확인할 수 있다.
+  
+###### cannot find symbol (Compile Time error)
+- 클래스명이나 변수명이 잘못되었을 때 발생하는 에러
