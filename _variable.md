@@ -37,9 +37,15 @@ sample = 123456789;
 int intValue = sample.intValue();
 ```
   
-###### LocalDate, LocalTime, LocalDateTime
+###### LocalDate / LocalTime / LocalDateTime
 ```java
 LocalDate localDate = null;
 LocalTime localTime = null;
 LocalDateTime localDateTime = null;
+```
+  
+###### Period / Duration
+```java
+Period period = null;
+Duration duration = null;
 ```
