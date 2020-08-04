@@ -29,3 +29,17 @@ log.info(toggle);
 ```
 - js 에서 boolean 값을 스트링 타입으로 보내도 "true" or "false"
 - java 에서 boolean 타입으 변수에 대입할 경우 java에서는 boolean 타입이 된다
+  
+###### Integer to int  
+```java
+Integer sample = null;
+sample = 123456789;
+int intValue = sample.intValue();
+```
+  
+###### LocalDate, LocalTime, LocalDateTime
+```java
+LocalDate localDate = null;
+LocalTime localTime = null;
+LocalDateTime localDateTime = null;
+```
