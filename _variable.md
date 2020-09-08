@@ -49,3 +49,7 @@ LocalDateTime localDateTime = null;
 Period period = null;
 Duration duration = null;
 ```
+###### default value
+```java
+String str; // default value is null
+```
