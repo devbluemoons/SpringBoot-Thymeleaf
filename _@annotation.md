@@ -11,6 +11,8 @@
 @RequestBody // 요청을 http body 에 받아 올 때
 @ResponseBody // 응답을 http body 에 담아 보낼 때 / return 값이 없어도 적용하는 것이 좋다
 ```
+[Ref.] https://kimdonghyungsoo.tistory.com/8  
+
 
 ###### @Controller / @RestController
 ```java
