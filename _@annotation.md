@@ -52,5 +52,20 @@ public String findAllTestDev(TestDevVo vo, Model model) throws Exception{
 - 요청 파라미터를 앞에 선언해준다 
 - 주의할 것은 파라미터 필드중 null 값이 있으면 에러가 발생한다  
   
-###### @Cacheable
+###### Use Cache
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+```
+```java
+@EnableCaching
+@SpringBootApplication
+public class MyApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+```
 
